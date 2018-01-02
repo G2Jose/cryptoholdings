@@ -1,6 +1,6 @@
 {
-  "name": "cryptovalue",
-  "version": "1.0.0",
+  "name": "cryptoholdings",
+  "version": "0.1.1",
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -13,7 +13,7 @@
     "prepare": "npm run build"
   },
   "bin": {
-    "crypto": "index.js"
+    "crypto": "lib/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -33,5 +33,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "prettier": "^1.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:G2Jose/cryptoholdings.git"
   }
 }
