@@ -3,12 +3,15 @@ import accounting from 'accounting';
 
 const BASE_URL = 'https://api.coinmarketcap.com/v1/ticker';
 
-const createApiUrl = currency => `${BASE_URL}/${currency}/?convert=CAD`;
+const convertTo = process.env.currency || 'CAD';
+
+const createApiUrl = currency =>
+  `${BASE_URL}/${currency}/?convert=${convertTo}`;
 
 const getUnitPrice = async currency => {
   const response = await axios.get(createApiUrl(currency));
   if (response.data && response.data.length >= 1)
-    return response.data[0].price_cad;
+    return response.data[0][`price_${convertTo.toLowerCase()}`];
   return new Error('Error ', response.status);
 };
 

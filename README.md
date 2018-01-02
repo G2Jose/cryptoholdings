@@ -22,3 +22,17 @@ Example `.holdings.json` file
   "ethereum": 1.0
 }
 ```
+
+### Base currency
+
+The CLI uses CAD as its base currency by default. To use a different currency, use a `currency` environment variable.
+
+For example, to use USD as the base currency, run `currency=USD crypto`
+
+You can also set this in your `.bashrc` file. simply append `export currency=USD` to it.
+
+Valid base currencies at the time of writing include the following:
+
+* "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
+
+An updated list can be found at https://coinmarketcap.com/api/
